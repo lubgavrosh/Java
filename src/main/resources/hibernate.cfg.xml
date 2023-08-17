@@ -5,7 +5,7 @@
     <session-factory>
 
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/spu123</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">123456</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
@@ -14,8 +14,18 @@
         <property name="hibernate.connection.characterEncoding">utf8</property>
         <property name="hibernate.connection.useUnicode">true</property>
         <property name="show_sql">true</property>
-        <property name="hbm2ddl.auto">create</property>
-        <property name="hbm2ddl.auto">create</property> <!-- Соответствующая опция -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <mapping class="org.example.models.User" />
+        <mapping class="org.example.models.Role" />
+
+        <mapping class="org.example.models.Category" />
+        <mapping class="org.example.models.Product"/>
+        <mapping class="org.example.models.ProductImage"/>
+
+        <mapping class="org.example.models.Question"/>
+        <mapping class="org.example.models.QuestionResponse"/>
+
     </session-factory>
 
 </hibernate-configuration>
